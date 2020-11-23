@@ -43,8 +43,8 @@ public class FrontController extends HttpServlet {
 		
 		System.out.println(uri + " : " + contextPath + " : " + commandPath);
 		
-		Command command = map.get(commandPath);	//필요한 command객체를 찾아옴
-		String viewPage = command.execute(req, resp); 	//명령실행 후 보여줄 결과페이지
+		Command command = map.get(commandPath);	//필요한 command 객체를 찾아옴
+		String viewPage = command.execute(req, resp); 	//명령실행 후 보여줄 결과페이지 선택
 		
 		if(viewPage !=null) {
 			if(viewPage.startsWith("redirect:")) {
